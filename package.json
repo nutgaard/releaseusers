@@ -1,0 +1,20 @@
+{
+  "name": "releaseusers",
+  "version": "0.0.1",
+  "description": "Test page for releasing users",
+  "main": "index.js",
+  "author": "Nicklas Utgaard <nutgaard@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "copyfiles -f ./node_modules/whatwg-fetch/fetch.js public",
+    "start": "node index.js",
+    "deploy": "yarn run generate 5000 real && gh-pages -d public"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "copyfiles": "^1.2.0",
+    "express": "^4.15.2",
+    "gh-pages": "^0.12.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
